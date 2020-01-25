@@ -18,12 +18,8 @@
 #include <QLibrary>
 #include <QString>
 
-#if defined(Q_OS_WIN32)
-#include "readline.h"
-#elif defined(Q_OS_UNIX)
 #include <readline/readline.h>
 #include <readline/history.h>
-#endif
 
 CLI* CLI::instance = nullptr;
 
@@ -157,11 +153,7 @@ void CLI::println(const QString &msg)
 
 int CLI::historyLength() const
 {
-#if defined(Q_OS_WIN)
-    return history_length();
-#elif defined(Q_OS_UNIX)
     return history_length;
-#endif
 }
 
 void CLI::printWarn(const QString &msg)

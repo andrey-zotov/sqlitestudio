@@ -27,7 +27,7 @@ gui_app.depends = gui
 SUBDIRS += \
     core \
     gui \
-    cli \
+#    cli \
     gui_app
 
 if(contains(DEFINES,tests)) {

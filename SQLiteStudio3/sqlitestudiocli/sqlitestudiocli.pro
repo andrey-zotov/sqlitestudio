@@ -76,7 +76,7 @@ LIBS += -lcoreSQLiteStudio
 
 win32: {
     INCLUDEPATH += $$PWD/../../../include
-    LIBS += -L$$PWD/../../../lib -ledit_static
+    LIBS += -L$$PWD/../../../lib -lreadline
 }
 
 unix: {

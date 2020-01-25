@@ -9,11 +9,7 @@
 #include <QString>
 #include <QDebug>
 
-#if defined(Q_OS_WIN32)
-#include "readline.h"
-#elif defined(Q_OS_UNIX)
 #include <readline/readline.h>
-#endif
 
 CliCompleter* CliCompleter::instance = nullptr;
 
